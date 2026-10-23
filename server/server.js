@@ -8,7 +8,7 @@ dotenv.config();
 
 const server = express();
 
-connectDb()
+connectDb().catch((err) => console.log('Connection Failed'))
 
 server.use(express.json());
 server.use(cors())
@@ -17,6 +17,9 @@ server.use('/api/users',userRoute);
 
 server.use('/api/expense',expenseRoute);
 
+server.get('/',(req,res)=>{
+    res.send('Api is Running')
+    })
 
 
 const PORT=process.env.PORT || 5001
