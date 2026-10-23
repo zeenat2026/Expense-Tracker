@@ -55,13 +55,14 @@ const navigate = useNavigate();
     }
 
     useEffect(()=>{
+      if(!error) return
     const timeoutId=setTimeout(() => {
-      setErr(null)
+      setError(null)
     }, 6000);
     
     return ()=>clearTimeout(timeoutId)
-    },[err])
-    
+    },[error])
+
   return (
    <LoginForm err={error} loading={loading} 
    loginFnc={handleLogin}

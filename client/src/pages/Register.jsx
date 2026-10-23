@@ -71,6 +71,15 @@ const Register = () => {
     }
   }
 
+  useEffect(()=>{
+   if(!err) return
+const timeoutId=setTimeout(() => {
+  setErr(null)
+}, 6000);
+
+return ()=>clearTimeout(timeoutId)
+},[err])
+
   return (
     <RegisterForm
       err={err}
@@ -82,13 +91,7 @@ const Register = () => {
   );
 };
 
-useEffect(()=>{
-const timeoutId=setTimeout(() => {
-  setErr(null)
-}, 6000);
 
-return ()=>clearTimeout(timeoutId)
-},[err])
 const RegisterForm = ({ err, loading, signUpFnc, formState, handleChange }) => {
   const [showPassword, setShowPassword] = useState(false);
 
