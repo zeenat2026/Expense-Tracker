@@ -2,8 +2,8 @@
 
 A full-stack expense tracker built with the MERN stack. Users can record their income and expenses, view a summary and a category-wise chart, and edit or delete entries anytime. Each user only sees their own data, and authentication is handled with JWT.
 
-**Live Demo:** []
-**Backend API:** []
+**Live Demo:** [https://expense-tracker-frontend-zeenat7.vercel.app]
+**Backend API:** [https://expense-tracker-backend-blue-mu.vercel.app]
 
 
 ## Features
@@ -89,7 +89,7 @@ npm install
 ```
 Create a `.env` file in `client/`:
 ```
-VITE_API_URL=https://market-hub-backend.vercel.app
+VITE_API_URL=https://expense-tracker-backend-blue-mu.vercel.app
 ```
 ```bash
 npm run dev

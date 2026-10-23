@@ -6,6 +6,7 @@ import { registerUser } from "../service/authService";
 import useAuthStore from "../store/authStore";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { useEffect } from "react";
 
  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
 
@@ -81,6 +82,13 @@ const Register = () => {
   );
 };
 
+useEffect(()=>{
+const timeoutId=setTimeout(() => {
+  setErr(null)
+}, 6000);
+
+return ()=>clearTimeout(timeoutId)
+},[err])
 const RegisterForm = ({ err, loading, signUpFnc, formState, handleChange }) => {
   const [showPassword, setShowPassword] = useState(false);
 
