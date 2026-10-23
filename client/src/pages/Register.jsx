@@ -78,7 +78,8 @@ const timeoutId=setTimeout(() => {
 }, 6000);
 
 return ()=>clearTimeout(timeoutId)
-},[err])
+
+},[err]);
 
   return (
     <RegisterForm

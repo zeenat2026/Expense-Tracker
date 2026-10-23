@@ -61,7 +61,7 @@ const navigate = useNavigate();
     }, 6000);
     
     return ()=>clearTimeout(timeoutId)
-    },[error])
+    },[error]);
 
   return (
    <LoginForm err={error} loading={loading} 
