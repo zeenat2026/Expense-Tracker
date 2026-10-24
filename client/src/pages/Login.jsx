@@ -55,7 +55,7 @@ const navigate = useNavigate();
     }
 
     useEffect(()=>{
-      if(!error) return
+      // if(!error) return
     const timeoutId=setTimeout(() => {
       setError(null)
     }, 6000);
