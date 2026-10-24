@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import  { useState,useEffect } from 'react';
 import { Avatar, Box, Paper, Typography } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import TextField from '@mui/material/TextField';
@@ -55,7 +55,7 @@ const navigate = useNavigate();
     }
 
     useEffect(()=>{
-      // if(!error) return
+      if(!error) return
     const timeoutId=setTimeout(() => {
       setError(null)
     }, 6000);
