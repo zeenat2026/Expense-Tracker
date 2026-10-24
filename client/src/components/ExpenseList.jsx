@@ -31,7 +31,7 @@ const ExpenseList = () => {
     fetchExpenses();
   }, []);
 
-  if (loading) return <Loader />;
+  if (loading) return <Box sx={{display:'grid',placeContent:'center'}}><Loader /></Box>;
   if (err) return <Alert severity="error" sx={{ mt: 4 }}>{err}</Alert>;
   if (expenses.length === 0) return <Typography sx={{ mt: 4, textAlign: 'center' }}>No expenses yet.</Typography>;
   return (
